@@ -10,28 +10,23 @@ public class Java8_Optional {
 		String s = "TEste";
 		String s1 = "1";
 		
-		System.out.println("<==============================>");
 		
 		Optional<Integer> numero = converteEmNumero(s1); //Esse é um objeto que pode ou não conter um número inteiro
 		
-		System.out.println("<==============================>");
 		
 		//Método isPresent
 		System.out.println(numero.isPresent()); //Verifica se existe valor ou não e retorna true or false
 		
-		System.out.println("<==============================>");
 		
 		//Método isPresent se passando como parametro uma expressão lambda
 		numero.ifPresent(n -> System.out.println(n)); //Se existir valor ele executa esse código (a expressao lambda) e imprime o valor
 		// |
 		//  `---> É um If implicito
 		
-		System.out.println("<==============================>");
 		
 		//Método get
 		System.out.println(numero.get()); //Pega o valor do optional, porém se for passado uma string com frase/letras, lança uma exceção
 				
-		System.out.println("<==============================>");
 		
 		//Método orElse
 		Integer num = converteEmNumero(s).orElse(2); //Aqui se ele não consegue pegar o valor do número ele substitui por um valor
@@ -39,7 +34,6 @@ public class Java8_Optional {
 		
 		System.out.println(num);
 		
-		System.out.println("<==============================>");
 		
 		//Método orElseGet
 		Integer num2 = converteEmNumero(s)
@@ -49,7 +43,6 @@ public class Java8_Optional {
 		System.out.println(num2);
 		
 		
-		System.out.println("<==============================>");
 		
 		//orElseThrow
 		Integer num3 = converteEmNumero(s)
@@ -59,7 +52,6 @@ public class Java8_Optional {
 		System.out.println(num3);
 		
 		
-		System.out.println("<==============================>");
 		
 		//Utilizando stream
 		Stream.of(1, 2, 3)

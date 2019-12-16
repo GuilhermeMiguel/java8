@@ -12,6 +12,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Collect {
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 		
 		//MÉTODO COLLEC CONTENDO AGRUPAMENTO PARA OBJETOS MUTAVEIS 
@@ -42,11 +43,11 @@ public class Collect {
 				System.out.println("Esse é o list: " + collect + " esse é o set: " +collect2);
 		
 		//Método toList
-		List<Integer> collect3 = lista.stream()
+		lista.stream()
 				.filter(n -> n % 3 == 0)
 				.collect(Collectors.toCollection(() -> new LinkedList()));
 				
-			System.out.println("Esse é o toCollection: " + collect3);
+		//	System.out.println("Esse é o toCollection: " + collect3);
 		
 		//Método joining - agrupa os valores do stream em uma unica string
 			//diferente do reduce, o joining usa internamente um stringbuilder que é muito mais performatico
