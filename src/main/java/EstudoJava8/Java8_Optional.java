@@ -60,7 +60,6 @@ public class Java8_Optional {
 	}
 	
 	private static Integer operacaoPesada() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

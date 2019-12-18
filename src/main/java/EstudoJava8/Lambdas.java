@@ -37,6 +37,5 @@ public class Lambdas {
 				lista.stream()
 					.filter(e -> e % 2 == 0) // Resto da divisão igual a 0 numero modulo 2
 					.forEach(e -> System.out.println(e));
-				
 	}
 }

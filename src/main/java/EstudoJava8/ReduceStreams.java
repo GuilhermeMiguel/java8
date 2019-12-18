@@ -100,7 +100,5 @@ public class ReduceStreams {
 		
 		//REDUCE É PARA SE TRABALHAR COM OBJETOS IMUTAVEIS @_@ (º_º)
 			//O COLLECT É PARA SE TRABALHAR COM OBJETOS MUTAVEIS
-			
-		
 	}
 }
