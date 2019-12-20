@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 public class Java8_Optional {
 	public static void main(String[] args) {
 		
-		String s = "TEste";
+		String s = "Teste";
 		String s1 = "1";
 		
 		
@@ -42,16 +42,12 @@ public class Java8_Optional {
 		
 		System.out.println(num2);
 		
-		
-		
 		//orElseThrow
 		Integer num3 = converteEmNumero(s)
 				.orElseThrow(); //Esse código lança um exceção se o optional estiver vazio, como parâmetro posso passar  uma
 		//lambda Exression para ele fazer um condicional e ser mais rapido
 		
 		System.out.println(num3);
-		
-		
 		
 		//Utilizando stream
 		Stream.of(1, 2, 3)

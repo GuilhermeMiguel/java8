@@ -28,6 +28,7 @@ public class ReduceStreams {
 	//Precisa ser associativo para que se eu executar o meu stream em paralelo o resultado precisa ser o mesmo 
 	
 		//Reduce - soma
+		System.out.println("\n---Reduce Soma---");
 		Optional<Integer> reduceSoma = lista.stream()
 			.reduce((n1, n2) -> n1 + n2);
 		
@@ -35,6 +36,7 @@ public class ReduceStreams {
 		
 		
 		//Reduce - Multiplicacao
+		System.out.println("\n---Reduce Multiplicação---");
 		Optional<Integer> reduceMultiplicacao = lista.stream()
 				.reduce((n1, n2) -> n1 * n2);
 		
@@ -42,25 +44,25 @@ public class ReduceStreams {
 		
 		
 		//Reduce - concatenação
+		System.out.println("\n---Reduce Concatenação---");
 		Optional<String> reduceConcatenacao = listaString.stream()
 				.reduce((s1, s2) -> s1.concat(s2)); //junta todas as palavras
 		
 		System.out.println(reduceConcatenacao.get());
 		
 		
-		
-		
 		//Reduce - soma
+		System.out.println("\n---Reduce Soma---");
 		Integer reduceSoma2 = lista.stream()
 			.reduce(0, (n1, n2) -> n1 + n2); //0 é valor de identidade, eu chamo esse valor e qualquer outro
 			//e o resultado tem que ser esse outro valor, na soma é 0
 			//Valor de identidade é o n1 todos os outros valores vão ser o n2 
 		
-		
 		System.out.println(reduceSoma2);
 		
 		
 		//Reduce - Multiplicacao
+		System.out.println("\n---Reduce Multiplicação---");
 		Integer reduceMultiplicacao2 = lista.stream()
 				.reduce(1, (n1, n2) -> n1 * n2); //Na multiplicação o valor de identidade é 1
 		
@@ -68,18 +70,21 @@ public class ReduceStreams {
 		
 		
 		//Reduce - concatenação
+		System.out.println("\n---Reduce Concatenação---");
 		String reduceConcatenacao2 = listaString.stream()
 				.reduce("", (s1, s2) -> s1.concat(s2)); //Em string é uma string vazia
 		
 		System.out.println(reduceConcatenacao2);
 		
 		//reduce - menor valor
+		System.out.println("\n---Reduce Menor Valor---");
 		double menorValor = DoubleStream.of(1.5, 2.9, 6.7)
 				.reduce(Double.POSITIVE_INFINITY, (d1, d2) -> Math.min(d1, d2));
 		
 		System.out.println(menorValor);
 		
 		//Reduce - soma
+		System.out.println("\n---Reduce Soma---");
 		Integer reduceSoma3 = lista.stream()
 			.reduce(0, (n1, n2) -> n1 + n2, (n1, n2) -> n1 + n2); //Importante ver que o terceiro argumento
 												//é a combinação que pode ser igual ao segundo argumento
@@ -90,6 +95,7 @@ public class ReduceStreams {
 		
 		
 		//Reduce - map + combinar
+		System.out.println("\n---Reduce Map + Combinar---");
 		String reduce = lista.stream()
 				.reduce(
 						"",
