@@ -2,6 +2,8 @@ package EstudoJava8;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class TesteImpressaoDatas {
@@ -14,16 +16,10 @@ public class TesteImpressaoDatas {
 		int mes = dataAtual.getMonthValue();
 		int ano = dataAtual.getYear();
 
-		List<Integer> listaAnos = new ArrayList<>();
+		
+		List<Integer> listaAnos = new ArrayList<>(Arrays.asList(ano - 4, ano -3, ano -2, ano -1, ano));
 
-		for (int i = 0; i <= 4; i++) {
-			if (i == 0) {
-				listaAnos.add(ano);
-			} else {
-				listaAnos.add(ano - i);
-			}
-		}
-
+		
 		if (dia >= 15 && mes == 12) {
 			listaAnos.add(ano + 1);
 
@@ -33,6 +29,7 @@ public class TesteImpressaoDatas {
 
 		}
 
+		
 		listaAnos.forEach(System.out::println);
 	}
 

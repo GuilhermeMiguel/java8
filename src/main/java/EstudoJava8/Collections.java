@@ -15,13 +15,16 @@ public class Collections {
 		lista.add(3);
 		lista.add(4);
 		
+		
 		//forEach
 		lista.forEach(n -> System.out.println(n));
+		
 		
 		//RemoveIf
 		System.out.println("\n---RemovIf - Retira elementos dada a condição---");
 		lista.removeIf(n -> n % 2 == 0); //Remove os pares
 		lista.forEach(n -> System.out.println(n));
+		
 		
 		//ReplaceAll
 		System.out.println("\n---ReplaceAll - Substitui elementos dada a condição---");
@@ -35,9 +38,11 @@ public class Collections {
 		map.put(2, "no");
 		map.put(3, "canal");
 		
+		
 		//Recebe um BiConsumer, a chave e o valor
 		System.out.println("\n---BiConsumer - Trabalha com chave e valor---");
 		map.forEach((k, v) -> System.out.println(k + " " + v)); 
+		
 		
 		//compute -- operacao realizada em algum momento no map
 		System.out.println("\n---compute - se a chave não existir ele retorna null agora---");

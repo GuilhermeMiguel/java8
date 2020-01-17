@@ -1,5 +1,6 @@
 package EstudoJava8;
 
+import java.time.LocalDate;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.stream.Stream;
@@ -10,6 +11,7 @@ public class Java8_Optional {
 		String s = "Teste";
 		String s1 = "1";
 		
+		rodaConsole();
 		
 		Optional<Integer> numero = converteEmNumero(s1); //Esse é um objeto que pode ou não conter um número inteiro
 		
@@ -55,6 +57,10 @@ public class Java8_Optional {
 				.ifPresent(System.out::println);
 	}
 	
+	private static void rodaConsole() {
+		LocalDate teste = LocalDate.now().plusDays(40);
+		System.out.println(teste);
+	}
 	private static Integer operacaoPesada() {
 		return null;
 	}
@@ -67,6 +73,7 @@ public class Java8_Optional {
 		} catch (Exception e) {
 			return Optional.empty();
 		}
+		
 				
 	}
 	
@@ -82,7 +89,8 @@ public class Java8_Optional {
 		} catch (Exception e) {
 			return OptionalInt.empty();
 		}
-				
 	}
+	
 }
+
 

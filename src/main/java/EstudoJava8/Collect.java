@@ -70,13 +70,13 @@ public class Collect {
 			
 			System.out.println("Média dos valores inteiros presentes nessa lista:" +mediaInteiros);
 		
+			
 		//summing - faz o mesmo, que o anterior
 			System.out.println("\n---Tira a média dos valores inteiros---");
 			Integer somaInteiros = lista.stream()
 				.collect(Collectors.summingInt(n -> n.intValue()));
 			
 			System.out.println("Média dos valores inteiros presentes nessa lista:" +somaInteiros);
-			
 			
 			
 			//summarizing
@@ -97,11 +97,13 @@ public class Collect {
 				.collect(Collectors.counting());
 			System.out.println(quantidade);
 			
+			
 			//max
 			System.out.println("\n---Maximo---");
 			Optional<Integer> max = lista.stream()
 					.collect(Collectors.maxBy(Comparator.naturalOrder()));
 				System.out.println(max);
+				
 				
 			//min
 				System.out.println("\n---Min---");
@@ -109,11 +111,13 @@ public class Collect {
 						.collect(Collectors.minBy(Comparator.naturalOrder()));
 					System.out.println(min);
 					
+					
 			//groupinBy
 			System.out.println("\n---Forma grupos---");
 			Map<Integer, List<Integer>> groupingBy = lista.stream()
 					.collect(Collectors.groupingBy(n -> n % 3 ));
 			System.out.println(groupingBy);
+			
 			
 			//partitionBy
 			System.out.println("\n---Forma grupos para true e false para determinada condição---");
