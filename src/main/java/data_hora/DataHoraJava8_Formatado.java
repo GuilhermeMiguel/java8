@@ -5,7 +5,6 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.TemporalAccessor;
-import java.util.Locale;
 
 public class DataHoraJava8_Formatado {
 
@@ -17,8 +16,8 @@ public class DataHoraJava8_Formatado {
 		
 		LocalDateTime ldt = LocalDateTime.now();
 		DateTimeFormatter isoDateTime = DateTimeFormatter.ISO_DATE_TIME;
-		DateTimeFormatter isoDate = DateTimeFormatter.ISO_DATE;
-		DateTimeFormatter isoTime = DateTimeFormatter.ISO_TIME;
+//		DateTimeFormatter isoDate = DateTimeFormatter.ISO_DATE;
+//		DateTimeFormatter isoTime = DateTimeFormatter.ISO_TIME;
 		
 		
 		DateTimeFormatter formatterDate = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);

@@ -15,7 +15,8 @@ public class DataHoraJava_Escolha {
 		
 		//ZonedDateTime = Data + Hora + Fuso Horário -- Localidade 
 		
-
+		
+		
 		Instant now = Instant.now();
 		
 		//Lança excessão pois instant aceita incremento de milsessegundos
@@ -26,10 +27,14 @@ public class DataHoraJava_Escolha {
 			System.out.println("Caiu na exceção");
 		}
 		
-		
+		ZonedDateTime agora = ZonedDateTime.now();
 		//Esta criando um zoned Date time apartir de um instant
 		ZonedDateTime criacaoZDT = now.atZone(ZoneId.of("America/Sao_Paulo"));
-		System.out.println(criacaoZDT);
+		
+		ZonedDateTime horaLA = 
+				agora.withZoneSameInstant(ZoneId.of("America/Argentina/Buenos_Aires"));
+		
+		System.out.println(horaLA);
 		
 		//Ai transformando em data eu posso somar mes, dia, ano
 		criacaoZDT.plusMonths(5);
