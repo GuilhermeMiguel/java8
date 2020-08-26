@@ -3,9 +3,8 @@ package Heranca;
 public class HerancaTeste {
 
 	public static void main(String[] args) {
-		Pessoa p = new Pessoa();
+		Pessoa p = new Pessoa("Gina");
 		Endereco end = new Endereco();
-		p.setNome("Gina");
 		p.setCpf("12345");
 
 		end.setRua("Rua 25");
@@ -17,9 +16,8 @@ public class HerancaTeste {
 		
 		
 		System.out.println("--------------------------------------------------------------");
-		Funcionario f = new Funcionario();
+		Funcionario f = new Funcionario("Augusto");
 		
-		f.setNome("Augusto");
 		f.setCpf("9888999");
 		f.setSalario(150000);
 		f.setEndereco(end);
