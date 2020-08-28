@@ -16,7 +16,9 @@ public class HerancaTeste {
 		p.imprime();
 		
 		
+		//Funcionario extende pessoa, então ele tem todos os seus campos, mais aqueles que eu desejar adicionar 
 		System.out.println("--------------------------------------------------------------");
+		
 		Funcionario f = new Funcionario();
 		
 		f.setNome("Augusto");

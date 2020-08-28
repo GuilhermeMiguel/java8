@@ -16,7 +16,8 @@ public class Funcionario extends Pessoa{
 	
 	@Override
 	public void imprime() {
-		super.imprime();
+		//SUPER -- chama o metodo da classe que ele esta extendendo
+		super.imprime();  
 		System.out.println(this.salario);
 	}
 	

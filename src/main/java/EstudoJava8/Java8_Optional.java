@@ -32,7 +32,7 @@ public class Java8_Optional {
 		
 		//Método orElse
 		Integer num = converteEmNumero(s).orElse(2); //Aqui se ele não consegue pegar o valor do número ele substitui por um valor
-		//padrão que no caso é o 2
+		//padrão que no caso é o 2 -- valor default
 		
 		System.out.println(num);
 		
@@ -46,14 +46,18 @@ public class Java8_Optional {
 		
 		//orElseThrow
 		Integer num3 = converteEmNumero(s)
-				.orElseThrow(); //Esse código lança um exceção se o optional estiver vazio, como parâmetro posso passar  uma
+				.orElseThrow(()-> new NullPointerException("Valor Vazio.")); 
+		//Esse código lança um exceção se o optional estiver vazio, como parâmetro posso passar  uma
 		//lambda Exression para ele fazer um condicional e ser mais rapido
 		
 		System.out.println(num3);
 		
+		
+		
 		//Utilizando stream
 		Stream.of(1, 2, 3)
-				.findFirst()
+				.findFirst() //Retorma um optional -- retorna o primeiro da lista
+//				.ifPresent(n -> System.out.println(n) );
 				.ifPresent(System.out::println);
 	}
 	
@@ -61,6 +65,8 @@ public class Java8_Optional {
 		LocalDate teste = LocalDate.now().plusDays(40);
 		System.out.println(teste);
 	}
+	
+	//Metodo criado de exemplo só para nao gerar erro na classe
 	private static Integer operacaoPesada() {
 		return null;
 	}
@@ -77,7 +83,7 @@ public class Java8_Optional {
 				
 	}
 	
-	//NÃO UTILIZAR OPTIONAL PARA RECEBER COMO ARGUMENTO, SE FOR NECESSÁRIO RECEBER VALOR OU VAZIO, EU FAÇO UMA SOBRECARGA DE MÉTODO
+	//NÃO UTILIZAR OPTIONAL PARA RECEBER COMO ARGUMENTO, SE FOR NECESSÁRIO VAZIO, EU FAÇO UMA SOBRECARGA DE MÉTODO
 //QUE NÃO RECEBE PARAMETROS
 	
 	//Optional com tipo primitivo
@@ -89,6 +95,11 @@ public class Java8_Optional {
 		} catch (Exception e) {
 			return OptionalInt.empty();
 		}
+	}
+	
+	//Sobre Carga
+	public static OptionalInt converteEmNumeroInt() {
+		return null;
 	}
 	
 }
