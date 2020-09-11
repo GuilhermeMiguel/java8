@@ -4,20 +4,23 @@ package Heranca;
 public class Funcionario extends Pessoa{
 
 	//A classe funcionario é mais especializada que a classe Pessoa 
+	
 	private double salario;
 
-	//No construtor da classe filha eu preciso passar o construtor para a classe pai
+	
 	public Funcionario(String nome) {
-//		this(); posso chamar assim se eu tiver outro constutor de funcionario
-	//mas ai meu super nao vai funcionar, nao posso ter os dois 
+		//Super assim como o this devem ser a primeira linha de execução dentro de um metodo
+
+		//Não posso ter super e this dentro de um construtor, por ambos devem ser a primeira linha 
 		
-		super(nome); //Aqui eu estou passando o argumento para a clase pai
-		//Super assim como o this -- devem ser a primeira linha de execução dentro de um metodo
+		super(nome); //Aqui eu estou passando o argumento para a clase pai, pois la eu também tenho um construtor que recebe o nome 
+		
 	}
 	
-//	public Funcionario() {
-//		// TODO Auto-generated constructor stub
-//	}
+/*	public Funcionario() {
+		// TODO Auto-generated constructor stub
+	}
+*/
 	
 	public double getSalario() {
 		return salario;
@@ -29,8 +32,10 @@ public class Funcionario extends Pessoa{
 	
 	@Override
 	public void imprime() {
+		
 		//SUPER -- chama o metodo da classe que ele esta extendendo
 		super.imprime();  
+		
 		System.out.println(this.salario);
 		this.imprimeReciboPagamento();
 	}

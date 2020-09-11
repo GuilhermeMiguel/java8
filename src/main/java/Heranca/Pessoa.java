@@ -2,6 +2,9 @@ package Heranca;
 
 public class Pessoa {
 
+	//Toda classe é filha/extendida de Object, pois toda classe da origem a um objeto
+	
+	
 	//Protected acessado somente dentro do pacote ou fora do pacote por 
 		//classes filhas - subclasses
 	
