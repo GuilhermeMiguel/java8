@@ -14,7 +14,7 @@ public class Pessoa {
 	protected Endereco endereco;
 	
 	
-	//Quando eu tenho construtor na classe pai, eu preciso ter construtor na classe filha
+	//Quando eu tenho construtor na classe pai, eu preciso ter construtor na classe filha 
 	public Pessoa(String nome) {
 		this.nome = nome;
 	}
