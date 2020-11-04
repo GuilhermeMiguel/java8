@@ -3,6 +3,8 @@ package Modificador_Static;
 public class CarroTeste {
 
 	/*
+	  		Classes Estáticas – As classes estáticas são aquelas que contêm apenas membros estáticos, além de que elas não podem ser instanciadas.
+	 
 			Em suma, métodos estáticos e variáveis ​​estáticas são de nível de classe, como métodos de instância 
 		e variáveis ​​de instância são instância ou nível de objeto. 
 	  
