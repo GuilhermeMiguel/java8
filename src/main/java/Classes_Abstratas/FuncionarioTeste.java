@@ -8,6 +8,13 @@ public class FuncionarioTeste {
 		/*	
 		 	Não posso mais instanciar o tipo funcionario, pois se tornou uma classe abstrata
 		 		Funcionario func = new Funcionario();
+		 		
+		 		Classes abstratas nao podem ser instanciadas, somente extendidas
+		 	
+		 		Elas funcionam como interfaces, PORÉM, podem ter implementação de metodos sem nenhum problema 
+		 	
+		 	metodos esses que serão herdados posteriormente
+		 	
 		 */
 
 		Gerente Marcio = new Gerente("Marcio", "01234-02", 5000);
@@ -17,6 +24,7 @@ public class FuncionarioTeste {
 		System.out.println(Marcio);
 		
 		
+		System.out.println("Esse toString() esta na classe abstrata Funcionario: " + Marcio.toString());
 		
 		System.out.println("----------------------------------------------");
 		
